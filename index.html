@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Strength & Breach Check</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- zxcvbn password strength library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Password Strength & Breach Checker</h1>
+    <p class="note">
+      Strength is checked locally in your browser and breach lookups use the anonymous k-anonymity Pwned Passwords API.
+    </p>
+
+    <section class="card">
+      <h2>Password strength</h2>
+      <label for="password">Enter password</label>
+      <input type="password" id="password" placeholder="Type a password..." />
+      <div class="strength-meter">
+        <div id="strength-bar"></div>
+      </div>
+      <p id="strength-text"></p>
+      <ul id="strength-suggestions"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Password breach check</h2>
+      <label for="breach-password">Check if password is breached</label>
+      <input type="password" id="breach-password" placeholder="Type password to check..." />
+      <button id="check-password-breach">Check password breach</button>
+      <p class="warning">Do not reuse real passwords on demo sites.</p>
+      <p id="password-breach-result"></p>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <p>Created by Revanth <br>
+    Have a secured life</p>
+  </footer>
+</body>
+</html>
